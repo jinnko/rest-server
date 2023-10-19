@@ -5,6 +5,13 @@ on:
     branches:
       - "master"
 
+  release:
+    types: [published]
+
+  schedule:
+    # field: m h dom m d
+    - cron: '9 6 * * MON'
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
